@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 演示合并单元格：
+    colspan：跨列合并（横向合并）
+    步骤：td 后colspan=（要合并的列数），删除即将被合并该列。
+    
+    rowspan: 跨行合并（纵向合并），操作同上-->
+    <table border="1" width="100%">
+        <tr>
+            <td colspan="2">1</td>
+            <!-- 横向合并1和2列，所以是两列，再将第2列删除 -->
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">6</td>
+            <td>7</td>
+            <!-- 进行跨行跨列合并，将8，9合并，再将13，14合并，再将89和1314合并 -->
+            <td colspan="2" rowspan="2">8</td>
+            
+            <td>10</td>
+        </tr>
+
+        <tr>
+            <!-- 6和11纵行合并，所以11行被删除 -->
+            <td>12</td>
+            
+            
+            <td>15</td>
+        </tr>
+    </table>
+</body>
+</html>
