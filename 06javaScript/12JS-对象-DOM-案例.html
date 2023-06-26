@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-DOM-案例</title>
+</head>
+<body>
+    <img id="h1" src="../img/body_eye_gankeikasui.png"> <br><br>
+
+    <div class="cls">部落</div> <br>
+    <div class="cls">联盟</div> <br>
+
+    <input type="checkbox" name="hobby"> 兽人
+    <input type="checkbox" name="hobby"> 亡灵
+    <input type="checkbox" name="hobby"> 血精灵
+    <input type="checkbox" name="hobby"> 巨魔
+    <input type="checkbox" name="hobby"> 牛头人
+</body>
+
+<script>
+    //1.将所有div标签的内容后面加上：为了艾泽拉斯（红色字体）
+    var divs = document.getElementsByTagName('div');
+    for (let i = 0; i < divs.length; i++) {
+        const div = divs[i];
+        div.innerHTML += "<font color='red'>为了艾泽拉斯！</font>";
+    }
+
+    //2.使所有复选框呈现选中状态
+    var ins = document.getElementsByName('hobby');
+    for (let i = 0; i < ins.length; i++) {
+        const element = ins[i];
+        element.checked = true;
+    }
+
+
+
+</script>
+</html>

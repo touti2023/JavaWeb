@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-基础语法</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    //var定义变量
+    // var a = 10;
+    // a = "张三";
+
+    // alert(a);
+
+    //特点1:var 定义的变量作用域很大，是全局变量。
+    //特点2:可以重复定义，但后面会覆盖前面。
+
+    // {
+    //     var x = 1;
+    //     var x = "a";
+    // }
+
+    // alert(x);
+
+    //版本6以后新添加2个关键字：
+    //演示 let 关键字：局部变量，且不可重复定义。
+    // {
+    //     let x = 1;
+    //     let x = "a";
+    // }
+
+    // alert(x);
+
+    //演示 const 关键字:只读类型，不可更改。
+    const pi = 3.14;
+    pi = 3.15; //控制台报错，不可更改
+    alert(pi);
+
+
+</script>
+</html>

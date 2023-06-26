@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wow魔兽世界</title>
+</head>
+<body>
+    
+    <img id="light" src="img/biaoti.jpeg" width="800" height="600"> <br>
+
+
+    <input type="button" value="联盟" onclick="on()">
+    <input type="button" value="部落" onclick="off()">
+
+    <br><br>
+
+    <input type="text" id="name" value="亡灵法师" onfocus="lower()" onblur="upper()">
+
+    <br><br>
+
+    <input type="checkbox" name="hobby">法师
+    <input type="checkbox" name="hobby">术士
+    <input type="checkbox" name="hobby">牧师
+    <br>
+
+    <input type="checkbox" name="hobby">圣骑士
+    <input type="checkbox" name="hobby">德鲁伊
+    <input type="checkbox" name="hobby">死亡骑士
+    <br>
+
+    <input type="checkbox" name="hobby">战士
+    <input type="checkbox" name="hobby">猎人
+    <input type="checkbox" name="hobby">萨满
+
+    <br>
+
+    <input type="button" name="" value="全选" onclick="checkAll()">
+    <input type="button" name="" value="反选" onclick="reverse()">
+
+</body>
+
+<script>
+//1.点击“选择联盟”，联盟出现；点击“部落”，部落出现。 ---onclick
+function on() {
+//2.获取img元素对象
+var img = document.getElementById("light");
+
+//3.设置src属性
+img.src = "img/lianmeng.jpeg"
+}
+
+
+function off() {
+    //2.获取img元素对象
+var img = document.getElementById("light");
+
+//3.设置src属性
+img.src = "img/buluo.webp"
+}
+
+
+
+//2.移动至输入框，展示“亡灵法师”，离开输入框，展示“人类法师” --onfocus,onblur
+function lower() {
+//1.获得元素
+    var input = document.getElementById("name");
+    //2.方法
+    input.value = "人类法师";
+
+}
+
+function upper() {
+    var input = document.getElementById("name");
+    //2.方法
+    input.value = "亡灵术士";
+}
+
+
+
+//3.全选/反选种族
+
+function checkAll() {
+
+var hobbys = document.getElementsByName("hobby");
+
+for (let i = 0; i < hobbys.length; i++) {
+    const element = hobbys[i];
+    element.checked = true;
+}
+
+}
+
+
+function reverse() {
+    var hobbys = document.getElementsByName("hobby");
+
+for (let i = 0; i < hobbys.length; i++) {
+    const element = hobbys[i];
+    element.checked = false;
+}
+}
+
+
+</script>
+</html>

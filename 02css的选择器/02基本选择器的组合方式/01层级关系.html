@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div font {/*层级关系：选择器1后可以空格+选择器2，可以限定标签作用范围。如下：div + font 不影响其他 div下的文本 */
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <font>我想变红</font>
+        <br />我想保持黑色
+    </div>
+
+    <font>我想保持黑色</font>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-运算符</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //==会自动进行类型转换，===全等不会进行类型转换。
+    // var age = 20;
+    // var _age = '20';
+    // var $age = 20;
+
+    // alert(age == _age);//T
+    // alert(age === _age);//F
+    // alert(age === $age);//T
+
+    //类型转换：parseInt 将其他类型转换为数字，如果数字中间有字母则忽视其背后所有内容，如果一开始就是字母则直接返回NaN。
+    // alert(parseInt("12"));//12
+    // alert(parseInt("12A45"));//12 后面忽视
+    // alert(parseInt("A45"));//Nan  直接忽视
+
+    //其他类型转换为 boolean类型
+    /* 
+    Number:0 和 NaN 为false，其他均为true
+    String：空字符为false，其余为true
+    null 和 undefined均为false
+
+    总结：0，NaN，空字符，null，undefined这5种情况为false，其余均为true，包括空格。
+    */
+    
+    if(0){
+        alert('0为false');
+    }
+    if(NaN){
+        alert('NaN 为false');
+    }
+    if(-1){
+        alert('其他都为为true');
+    }
+
+</script>
+</html>
